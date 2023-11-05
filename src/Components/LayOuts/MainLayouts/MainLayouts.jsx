@@ -7,11 +7,11 @@ const MainLayouts = () => {
     return (
         <div>
             <div className="max-w-screen-xl mx-auto px-8 md:px-10 lg:px-12 py-2">
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Toaster></Toaster>
-        </div>
-        <Footer></Footer>
+                <Navbar></Navbar>
+                <Outlet></Outlet>
+                <Toaster></Toaster>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
