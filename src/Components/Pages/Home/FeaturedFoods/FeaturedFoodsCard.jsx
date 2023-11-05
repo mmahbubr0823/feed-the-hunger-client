@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FeaturedFoodsCard = ({featuredFood}) => {
-    console.log(Object.keys(featuredFood).join(', '));
+    // console.log(Object.keys(featuredFood).join(', '));
     const {_id, FoodImage, FoodName, FoodQuantity, PickupLocation, DonatorInfo, ExpiredDate, AdditionalNotes} = featuredFood;
    
     return (
