@@ -60,7 +60,7 @@ const Login = () => {
                             New in here?
                             <Link
                                 className="font-medium text-pink-500 transition-colors hover:text-blue-700"
-                                to="/registration"
+                                to="/signUp"
                             >
                                 Register Now
                             </Link>

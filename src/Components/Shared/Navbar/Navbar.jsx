@@ -1,11 +1,11 @@
 import toast from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import { Link, NavLink } from "react-router-dom";
-import { CgProfile } from 'react-icons/cg';
 
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
+    // console.log(user);
 
     const handleLogOut = () => {
         logOut()
@@ -25,15 +25,15 @@ const Navbar = () => {
         <li className="lg:mr-0"><NavLink to="/myCart">Add Food</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">Manage Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">My Food Request</NavLink></li>
-        <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink to="/registration">Register</NavLink></li>
+        <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink to="/signUp">Register</NavLink></li>
         {
             user ?
                 <div>
-                    <button onClick={handleLogOut} className="px-2 py-1 rounded-md lg:bg-[#f56d6d]">Log out</button>
+                    <button onClick={handleLogOut} className="">Log out</button>
                 </div>
                 :
                 <div>
-                    <Link className="px-2 py-1 rounded-md lg:bg-[#f56d6d]" to="/login">Login</Link>
+                    <Link className="ml-1" to="/login">Login</Link>
                 </div>
         }
     </>
