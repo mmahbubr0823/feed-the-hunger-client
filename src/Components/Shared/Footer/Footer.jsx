@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-neutral text-neutral-content">
+            <footer className="mt-10 footer p-10 bg-neutral text-neutral-content">
             <aside>
                 <div className="flex flex-col items-center">
                     <img className="w-28 h-28 rounded-md" src="https://i.ibb.co/dGphmgc/6895997.jpg" alt="" />
