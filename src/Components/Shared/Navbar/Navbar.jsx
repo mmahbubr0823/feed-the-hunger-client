@@ -55,26 +55,42 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center lg:navbar-center">
                     <div className="mr-">
-                        <ul className="menu hidden lg:flex justify-between items-center menu-horizontal px-1">
+                        <ul className="menu menu-horizontal px-1">
+                            <li className="lg:mr-0"><NavLink to="/">Home</NavLink></li>
+                            <li className="lg:mr-0"><NavLink to="/addedProducts">Available Foods</NavLink></li>
+                            <li tabIndex={0}>
+                                <details>
+                                    <summary>More</summary>
+                                    <ul className="w-40 p-2">
+                                        <li><NavLink to="/myCart">Add Food</NavLink></li>
+                                        <li><NavLink to="/myCart">Manage Foods</NavLink></li>
+                                        <li><NavLink to="/myCart">My Food Request</NavLink></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li className=""><NavLink to="/signUp">Register</NavLink></li>
                             {
-                                links
+                                user ?
+                                    <div>
+                                        <button onClick={handleLogOut} className="">Log out</button>
+                                    </div>
+                                    :
+                                    <li className=""><NavLink to="/login">Login</NavLink></li>
                             }
-
-
                         </ul>
                     </div>
                     {
                         user &&
-                            <div className="">
-                                <div className="md:flex items-center gap-5">
+                        <div className="">
+                            <div className="md:flex items-center gap-5">
 
-                                    <div className="">
-                                        <h1 className="hidden lg:block">{user.displayName}</h1>
-                                        <img className="w-[40px] rounded-full ml-10 mb-3" src={user.photoURL} alt="" />
-                                    </div>
+                                <div className="">
+                                    <h1 className="hidden lg:block">{user.displayName}</h1>
+                                    <img className="w-[40px] rounded-full ml-10 mb-3" src={user.photoURL} alt="" />
                                 </div>
                             </div>
-                            
+                        </div>
+
                     }
                 </div>
             </div>

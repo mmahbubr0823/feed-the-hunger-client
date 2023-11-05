@@ -3,6 +3,7 @@ import MainLayouts from "../LayOuts/MainLayouts/MainLayouts";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import Home from "../Pages/Home/Home";
+import Page404 from "../Pages/Page404/Page404";
 
 
 const myCreatedRoutes = createBrowserRouter([
@@ -24,5 +25,9 @@ const myCreatedRoutes = createBrowserRouter([
         },
       ]
     },
+    {
+      path:'*',
+      element:<Page404></Page404>
+    }
   ]);
   export default myCreatedRoutes;
