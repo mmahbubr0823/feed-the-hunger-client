@@ -17,7 +17,7 @@ const FoodDetails = () => {
 
     return (
         <div>
-            <div className=" flex justify-center items-center p-4 bg-[#fbf4fa] gap-2 rounded-xl shadow-xl">
+            <div className=" flex justify-center items-center p-4 bg-[#f5f4fb] gap-2 rounded-xl shadow-xl">
                 <div>
                     <h1 className='font-bold text-center'>Donor:</h1>
                     <div className='flex gap-2 items-center'>

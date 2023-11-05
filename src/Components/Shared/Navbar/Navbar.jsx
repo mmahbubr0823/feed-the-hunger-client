@@ -22,7 +22,7 @@ const Navbar = () => {
 
         <li className="lg:mr-0"><NavLink to="/">Home</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/addedProducts">Available Foods</NavLink></li>
-        <li className="lg:mr-0"><NavLink to="/myCart">Add Food</NavLink></li>
+        <li className="lg:mr-0"><NavLink to="/addFood">Add Food</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">Manage Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">My Food Request</NavLink></li>
         <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink to="/signUp">Register</NavLink></li>
@@ -39,7 +39,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <div className="navbar lg:flex justify-between items-center bg-base-100 my-8">
+            <div className="navbar lg:flex justify-between items-center rounded bg-base-100 my-8">
                 <div className="lg:navbar-start block">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,7 +62,7 @@ const Navbar = () => {
                                 <details>
                                     <summary>More</summary>
                                     <ul className="w-40 p-2">
-                                        <li><NavLink to="/myCart">Add Food</NavLink></li>
+                                        <li><NavLink to="/addFood">Add Food</NavLink></li>
                                         <li><NavLink to="/myCart">Manage Foods</NavLink></li>
                                         <li><NavLink to="/myCart">My Food Request</NavLink></li>
                                     </ul>
