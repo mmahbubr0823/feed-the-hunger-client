@@ -5,7 +5,7 @@ import { CgProfile } from 'react-icons/cg';
 
 
 const Navbar = () => {
-    const { user, logOut } = useAuth;
+    const { user, logOut } = useAuth();
 
     const handleLogOut = () => {
         logOut()
@@ -54,7 +54,7 @@ const Navbar = () => {
                     <a className=" normal-case lg:text-xl xl:text-4xl font-semibold">Feed The <span className="text-[#fa4a4a]">Hunger</span></a>
                 </div>
                 <div className="flex items-center lg:navbar-center">
-                    <div className="">
+                    <div className="mr-">
                         <ul className="menu hidden lg:flex justify-between items-center menu-horizontal px-1">
                             {
                                 links

@@ -1,10 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast from "react-hot-toast";
+import SocialLogin from "./SocialLogin";
 
 
 const Login = () => {
-    const {logInUser} = useAuth;
+    const {logInUser} = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -54,7 +55,7 @@ const Login = () => {
                                 <input type="submit" className='btn bg-purple-400 p-2 rounded-lg' value ="Login" />
                             </div>
                         </form>
-                        {/* <SocialLogin></SocialLogin> */}
+                        <SocialLogin></SocialLogin>
                         <p className="mb-6 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                             New in here?
                             <Link
