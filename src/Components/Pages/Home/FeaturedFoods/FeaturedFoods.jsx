@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import FeaturedFoodsCard from './FeaturedFoodsCard';
 import { useEffect, useState } from 'react';
 
@@ -10,12 +10,13 @@ const FeaturedFoods = () => {
         setFeaturedFoods(sortedItems)
     }, [loadedFoods])
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto text-center'>
            <div className='grid grid-cols-2 gap-4 my-5'>
            {
                 featuredFoods.slice(0, 6).map(featuredFood =><FeaturedFoodsCard key={featuredFood._id} featuredFood={featuredFood}></FeaturedFoodsCard>)
             }
            </div>
+           <Link to={'/availableFoods'}><button className='btn mt-5 bg-[#c7c2f1]'>Show All</button></Link>
         </div>
     );
 };

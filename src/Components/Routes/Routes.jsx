@@ -7,6 +7,7 @@ import Page404 from "../Pages/Page404/Page404";
 import FoodDetails from "../Pages/FoodDetails/FoodDetails";
 import PrivateRoute from "./PrivateRoute";
 import AddFood from "../Pages/AddFood/AddFood";
+import AvailableFoods from "../Pages/AvailableFoods/AvailableFoods";
 
 
 const myCreatedRoutes = createBrowserRouter([
@@ -28,8 +29,14 @@ const myCreatedRoutes = createBrowserRouter([
             element:<Registration></Registration>
         },
         {
+            path:'/availableFoods',
+            element:<AvailableFoods></AvailableFoods>
+        },
+        {
             path:'/addFood',
-            element:<AddFood></AddFood>
+            element:<PrivateRoute>
+              <AddFood></AddFood>
+            </PrivateRoute>
         },
         {
             path:'/foodDetails/:id',
