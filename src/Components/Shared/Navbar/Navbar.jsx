@@ -21,7 +21,7 @@ const Navbar = () => {
     const links = <>
 
         <li className="lg:mr-0"><NavLink to="/">Home</NavLink></li>
-        <li className="lg:mr-0"><NavLink to="/addedProducts">Available Foods</NavLink></li>
+        <li className="lg:mr-0"><NavLink to="/availableFoods">Available Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/addFood">Add Food</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">Manage Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">My Food Request</NavLink></li>
@@ -57,11 +57,11 @@ const Navbar = () => {
                     <div className="mr-">
                         <ul className="menu menu-horizontal px-1">
                             <li className="lg:mr-0"><NavLink to="/">Home</NavLink></li>
-                            <li className="lg:mr-0"><NavLink to="/addedProducts">Available Foods</NavLink></li>
+                            <li className="lg:mr-0"><NavLink to="/availableFoods">Available Foods</NavLink></li>
                             <li tabIndex={0}>
                                 <details>
                                     <summary>More</summary>
-                                    <ul className="w-40 p-2">
+                                    <ul className="w-40 z-10 p-2">
                                         <li><NavLink to="/addFood">Add Food</NavLink></li>
                                         <li><NavLink to="/myCart">Manage Foods</NavLink></li>
                                         <li><NavLink to="/myCart">My Food Request</NavLink></li>

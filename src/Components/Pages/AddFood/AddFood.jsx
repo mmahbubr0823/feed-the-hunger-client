@@ -1,5 +1,5 @@
 import axios from "axios";
-import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const AddFood = () => {
 
@@ -41,7 +41,11 @@ const AddFood = () => {
         });
         console.log(response);
         if (response.data.acknowledged === true) {
-            toast.success('Food item  successfully added');
+            Swal.fire({
+                title: "",
+                text: "Food item successfully added.",
+                icon: "success"
+              });
         }
         }
         catch(error){
@@ -60,7 +64,7 @@ const AddFood = () => {
                             <span className="label-text">Food name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="fName" placeholder="Food name" className="w-full input input-bordered" />
+                            <input type="text" required name="fName" placeholder="Food name" className="w-full input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -68,7 +72,7 @@ const AddFood = () => {
                             <span className="label-text">Image url</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="fUrl" placeholder="Image url" className="w-full input input-bordered" />
+                            <input type="text" required name="fUrl" placeholder="Image url" className="w-full input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -76,7 +80,7 @@ const AddFood = () => {
                             <span className="label-text">Food Quantity</span>
                         </label>
                         <label className="input-group">
-                            <input type="number" name="fQuantity" placeholder="Food Quantity" className="input input-bordered w-full" />
+                            <input type="number" required name="fQuantity" placeholder="Food Quantity" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -84,7 +88,7 @@ const AddFood = () => {
                             <span className="label-text">Pickup Location</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="pLocation" placeholder="Pickup Location" className="input input-bordered w-full" />
+                            <input type="text" required name="pLocation" placeholder="Pickup Location" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -92,7 +96,7 @@ const AddFood = () => {
                             <span className="label-text">Expired Date</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="eDate" placeholder="Expired Date" className="input input-bordered w-full" />
+                            <input type="text" required name="eDate" placeholder="Expired Date" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -100,7 +104,7 @@ const AddFood = () => {
                             <span className="label-text">Additional Notes</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="notes" placeholder="Additional Notes" className="input input-bordered w-full" />
+                            <input type="text" required name="notes" placeholder="Additional Notes" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -108,7 +112,7 @@ const AddFood = () => {
                             <span className="label-text">Donator Image</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="dImage" placeholder="Donator Image" className="input input-bordered w-full" />
+                            <input type="text" required name="dImage" placeholder="Donator Image" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -116,7 +120,7 @@ const AddFood = () => {
                             <span className="label-text">Donator Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="dName" placeholder="Donator Name" className="input input-bordered w-full" />
+                            <input type="text" required name="dName" placeholder="Donator Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -124,7 +128,7 @@ const AddFood = () => {
                             <span className="label-text">Donator Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="email" name="dEmail" placeholder="Donator Email" className="input input-bordered w-full" />
+                            <input type="email" required name="dEmail" placeholder="Donator Email" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -132,7 +136,7 @@ const AddFood = () => {
                             <span className="label-text">Food Status</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="status" defaultValue={'Available'} placeholder="" className="input input-bordered w-full" />
+                            <input type="text" required name="status" defaultValue={'Available'} placeholder="" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
