@@ -1,15 +1,43 @@
 import { useLoaderData } from "react-router-dom";
 import AvailableFoodCard from "./AvailableFoodCard";
-
+import { useState } from "react";
 const AvailableFoods = () => {
     const loadedFoods = useLoaderData();
+    const [searchedFoods, setSearchedFoods] = useState(loadedFoods);
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        const fieldValue = e.target.fName.value;
+        const filteredFood = loadedFoods.filter(searchedFood => searchedFood.FoodName === fieldValue);
+        setSearchedFoods(filteredFood)
+        console.log(filteredFood);
+    }
     return (
         <div>
-           <div className="grid grid-cols-2 gap-4 my-5">
-            {
-                loadedFoods.map(availableFood => <AvailableFoodCard key={availableFood._id} availableFood={availableFood}></AvailableFoodCard>)
-            }
-           </div>
+            <div>
+                <h1 className="text-2xl font-semibold">Search foods by name:</h1>
+                <div className="form-control my-5">
+                    <form onSubmit={handleSearch}>
+                        <label className="input-group">
+                            <select name="fName" className="input input-bordered">
+                                {
+                                    loadedFoods.map(singleFood => <option key={singleFood._id}>
+                                        {
+                                            singleFood.FoodName
+                                        }
+                                    </option>)
+                                }
+                            </select>
+                            <input type="submit" className="btn bg-[#e39ce8]" value="Search" />
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4 my-5">
+                {
+                    searchedFoods.map(availableFood => <AvailableFoodCard key={availableFood._id} availableFood={availableFood}></AvailableFoodCard>)
+                }
+            </div>
         </div>
     );
 };

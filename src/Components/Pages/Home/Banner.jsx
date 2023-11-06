@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className=" flex items-center gap-3 bg-[#f2f7e8] p-4 rounded-md">
+        <div className=" flex items-center gap-5 bg-[#f2f7e8] py-4 px-8 rounded-md">
             <div className="w-1/2">
                 <div>
                     <h1 className="text-4xl font-semibold">Lets <span className="text-[#e95e8c]">Feed</span> Them </h1>
