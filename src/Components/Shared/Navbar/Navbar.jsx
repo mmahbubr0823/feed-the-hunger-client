@@ -24,7 +24,7 @@ const Navbar = () => {
         <li className="lg:mr-0"><NavLink to="/availableFoods">Available Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/addFood">Add Food</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/manageFood">Manage Foods</NavLink></li>
-        <li className="lg:mr-0"><NavLink to="/myCart">My Food Request</NavLink></li>
+        <li className="lg:mr-0"><NavLink to="/requested-foods">My Food Request</NavLink></li>
         <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink to="/signUp">Register</NavLink></li>
         {
             user ?
@@ -64,7 +64,7 @@ const Navbar = () => {
                                     <ul className="w-40 z-10 p-2">
                                         <li><NavLink to="/addFood">Add Food</NavLink></li>
                                         <li><NavLink to="/manageFood">Manage Foods</NavLink></li>
-                                        <li><NavLink to="/myCart">My Food Request</NavLink></li>
+                                        <li><NavLink to="/requested-foods">My Food Request</NavLink></li>
                                     </ul>
                                 </details>
                             </li>
