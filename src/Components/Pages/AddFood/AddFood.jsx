@@ -2,8 +2,6 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const AddFood = () => {
-
-
     const handleAddFood = async(e)=>{
         e.preventDefault();
         const form = e.target;
@@ -32,14 +30,14 @@ const AddFood = () => {
             AdditionalNotes:notes,
             status:status,
         }
-
+         // sending to backend
         try{
             const response = await axios.post('http://localhost:5000/featured-foods', formData, {
             headers: {
                 'Content-Type': 'application/json',
               },
         });
-        console.log(response);
+       
         if (response.data.acknowledged === true) {
             Swal.fire({
                 title: "",
@@ -49,9 +47,12 @@ const AddFood = () => {
         }
         }
         catch(error){
-            console.log(error);
+            Swal.fire({
+                title: "",
+                text: `${error}`,
+                icon: "error"
+            });
         }
-
     }
 
     return (

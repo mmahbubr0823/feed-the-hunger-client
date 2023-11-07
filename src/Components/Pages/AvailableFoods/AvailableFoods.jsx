@@ -1,16 +1,23 @@
 import { useLoaderData } from "react-router-dom";
 import AvailableFoodCard from "./AvailableFoodCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const AvailableFoods = () => {
     const loadedFoods = useLoaderData();
     const [searchedFoods, setSearchedFoods] = useState(loadedFoods);
+    const [dropdownFoods, setDropdownFoods] = useState([]);
 
+      // for dropdown 
+    useEffect(()=>{
+        const foodName = loadedFoods.filter((dropdownFood, index) => index===loadedFoods.findIndex(obj=> dropdownFood.FoodName===obj.FoodName));
+        setDropdownFoods(foodName)
+    }, [loadedFoods])
+
+    // getting dropdown value 
     const handleSearch = (e) => {
         e.preventDefault();
         const fieldValue = e.target.fName.value;
         const filteredFood = loadedFoods.filter(searchedFood => searchedFood.FoodName === fieldValue);
         setSearchedFoods(filteredFood)
-        console.log(filteredFood);
     }
     return (
         <div>
@@ -21,7 +28,7 @@ const AvailableFoods = () => {
                         <label className="input-group">
                             <select name="fName" className="input input-bordered">
                                 {
-                                    loadedFoods.map(singleFood => <option key={singleFood._id}>
+                                    dropdownFoods.map(singleFood => <option key={singleFood._id}>
                                         {
                                             singleFood.FoodName
                                         }

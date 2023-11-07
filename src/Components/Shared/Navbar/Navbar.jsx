@@ -23,7 +23,7 @@ const Navbar = () => {
         <li className="lg:mr-0"><NavLink to="/">Home</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/availableFoods">Available Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/addFood">Add Food</NavLink></li>
-        <li className="lg:mr-0"><NavLink to="/myCart">Manage Foods</NavLink></li>
+        <li className="lg:mr-0"><NavLink to="/manageFood">Manage Foods</NavLink></li>
         <li className="lg:mr-0"><NavLink to="/myCart">My Food Request</NavLink></li>
         <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink to="/signUp">Register</NavLink></li>
         {
@@ -63,7 +63,7 @@ const Navbar = () => {
                                     <summary>More</summary>
                                     <ul className="w-40 z-10 p-2">
                                         <li><NavLink to="/addFood">Add Food</NavLink></li>
-                                        <li><NavLink to="/myCart">Manage Foods</NavLink></li>
+                                        <li><NavLink to="/manageFood">Manage Foods</NavLink></li>
                                         <li><NavLink to="/myCart">My Food Request</NavLink></li>
                                     </ul>
                                 </details>
