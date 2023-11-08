@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import { useLoaderData } from "react-router-dom";
 import ManagedFoodCard from "./ManagedFoodCard";
+import { Helmet } from "react-helmet-async";
 
 const ManageFoods = () => {
     const { user } = useAuth();
@@ -15,6 +16,9 @@ const ManageFoods = () => {
     }, [loadedFoods, user.email])
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || ManageFoods</title>
+            </Helmet>
             {
                 managedFoods.map(managedFood => <ManagedFoodCard key={managedFood._id} managedFood={managedFood}></ManagedFoodCard>)
             }

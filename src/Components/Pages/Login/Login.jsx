@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import toast from "react-hot-toast";
 import SocialLogin from "./SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -28,6 +29,9 @@ const Login = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || Login</title>
+            </Helmet>
             <div className="hero max-h-screen bg-base-200 mt-10 rounded-xl">
                 <div className="hero-content flex justify-between lg:gap-28">
                     <div className="">

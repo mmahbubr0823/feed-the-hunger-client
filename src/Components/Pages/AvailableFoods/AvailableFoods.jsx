@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import AvailableFoodCard from "./AvailableFoodCard";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 const AvailableFoods = () => {
     const loadedFoods = useLoaderData();
     const [searchedFoods, setSearchedFoods] = useState(loadedFoods);
@@ -21,6 +22,9 @@ const AvailableFoods = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || AvailableFoods</title>
+            </Helmet>
             <div>
                 <h1 className="text-2xl font-semibold">Search foods by name:</h1>
                 <div className="form-control my-5">

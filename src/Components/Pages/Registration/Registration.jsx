@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import useAuth from '../../Hooks/useAuth/useAuth';
+import { Helmet } from 'react-helmet-async';
 
 const Registration = () => {
     const { createUser } = useAuth();
@@ -28,6 +29,9 @@ const Registration = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || Registration</title>
+            </Helmet>
             <div className="hero rounded-xl mt-10">
                 <div className="flex justify-between gap-10">
                     <div>

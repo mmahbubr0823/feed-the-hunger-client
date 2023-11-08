@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth/useAuth";
 import { useEffect, useState } from "react";
 import MyFoodRequestCart from "./MyFoodRequestCart";
+import { Helmet } from "react-helmet-async";
 
 const MyFoodRequest = () => {
     const {user} = useAuth();
@@ -15,6 +16,9 @@ const MyFoodRequest = () => {
     console.log(requestedFoods);
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || MyFoodRequest</title>
+            </Helmet>
             <div>
             {
                 requestedFoods.map(requestedFood => <MyFoodRequestCart

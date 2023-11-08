@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth/useAuth';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const FoodDetails = () => {
     const { user } = useAuth();
@@ -75,6 +76,9 @@ const FoodDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || FoodDetails</title>
+            </Helmet>
             <div className=" flex justify-center items-center p-4 bg-[#f5f4fb] gap-2 rounded-xl shadow-xl">
                 <div>
                     <h1 className='font-bold text-center'>Donor:</h1>

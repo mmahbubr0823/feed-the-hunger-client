@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 const AddFood = () => {
@@ -57,6 +58,9 @@ const AddFood = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || AddFood</title>
+            </Helmet>
             <h1 className="text-3xl text-center font-semibold my-8">Add a Food</h1>
             <form onSubmit={handleAddFood} className="border-2 p-3 bg-[#f7f2e6] rounded-lg">
                 <div className="grid grid-cols-2 gap-4 w-9/12 mx-auto">

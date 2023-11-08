@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Page404 = () => {
     return (
         <div>
+            <Helmet>
+                <title>Feed The Hunger || Page404</title>
+            </Helmet>
             <Link to={'/'}>
                 <button className="btn btn-outline ml-5 mt-5"><FaArrowLeft></FaArrowLeft>Home</button>
             </Link>
