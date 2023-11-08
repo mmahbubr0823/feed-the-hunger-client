@@ -33,7 +33,7 @@ const Login = () => {
                 <title>Feed The Hunger || Login</title>
             </Helmet>
             <div className="hero bg-base-200 mt-10 rounded-xl">
-                <div className="hero-content flex-col lg:flex lg:justify-between lg:gap-28">
+                <div className="hero-content flex-col lg:flex-row lg:justify-between lg:gap-28">
                     <div className="">
                         <img className="rounded-md w-[300px] h-[300px] lg:w-[600px] lg:h-[650px]" src="https://i.ibb.co/GCTqbBM/20944201.jpg" alt="" />
                     </div>
