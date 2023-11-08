@@ -16,7 +16,7 @@ const FeaturedFoods = () => {
                 featuredFoods.slice(0, 6).map(featuredFood =><FeaturedFoodsCard key={featuredFood._id} featuredFood={featuredFood}></FeaturedFoodsCard>)
             }
            </div>
-           <Link to={'/availableFoods'}><button className='btn mt-5 bg-[#c7c2f1]'>Show All</button></Link>
+           <Link to={'/availableFoods'}><button className='btn mt-5 bg-[#fc4ed6]'>Show All</button></Link>
         </div>
     );
 };
