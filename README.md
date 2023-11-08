@@ -6,4 +6,4 @@ The website includes the following features:
 5. Users can add a food if he/she logs in.
 6. Users can request for a food.
 
-live site link:
+live site link: https://feed-the-hunger-f361d.firebaseapp.com/
