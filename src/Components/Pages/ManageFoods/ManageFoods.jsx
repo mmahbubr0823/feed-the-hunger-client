@@ -7,8 +7,8 @@ import { Helmet } from "react-helmet-async";
 const ManageFoods = () => {
     const { user } = useAuth();
     const loadedFoods = useLoaderData()
-    const [managedFoods, setManagedFoods] = useState(loadedFoods);
-    console.log(managedFoods);
+    const [managedFoods, setManagedFoods] = useState([]);
+    // console.log(managedFoods);
 
     useEffect(() => {
         const filteredFoods = loadedFoods.filter(filteredFood => filteredFood?.DonatorInfo?.DonatorEmail === user.email);
@@ -20,7 +20,7 @@ const ManageFoods = () => {
                 <title>Feed The Hunger || ManageFoods</title>
             </Helmet>
             {
-                managedFoods.map(managedFood => <ManagedFoodCard key={managedFood._id} managedFood={managedFood}></ManagedFoodCard>)
+                managedFoods.map(managedFood => <ManagedFoodCard key={managedFood._id} managedFood={managedFood} managedFoods={managedFoods}></ManagedFoodCard>)
             }
         </div>
     );

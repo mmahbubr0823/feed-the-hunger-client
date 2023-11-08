@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyFoodRequestCart = ({requestedFood}) => {
+const MyFoodRequestCart = ({requestedFood, refetch}) => {
     const [status, setStatus]= useState(false);
    const {_id, FoodImage, FoodName, FoodQuantity, PickupLocation, DonatorInfo, ExpiredDate, AdditionalNotes, FId, UEmail, DonationMoney, CurrentDate} = requestedFood;
 
@@ -18,6 +18,7 @@ const MyFoodRequestCart = ({requestedFood}) => {
                 text: "Request successfully removed.",
                 icon: "success"
             });
+            refetch();
         }
     }
     catch (error) {
