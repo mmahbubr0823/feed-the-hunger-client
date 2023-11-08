@@ -4,7 +4,7 @@ const ClientReview = () => {
     return (
         <div>
             <h1 className='text-3xl text-center my-10 font-bold'>What our <span className='text-[#ff0066]'>donors</span> say:</h1>
-            <div className="grid gap-5 grid-cols-2">
+            <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
                 <div className="border-2 p-3 rounded-md shadow-md shadow-gray-50">
                     <div className='flex justify-between items-center '>
                     <div className="flex items-center gap-5 my-5">

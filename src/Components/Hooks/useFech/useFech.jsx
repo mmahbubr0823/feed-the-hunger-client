@@ -4,7 +4,7 @@ const useFech = () => {
     const {data, isLoading, isFetching, refetch}= useQuery({
         queryKey:['requestedFoods'],
         queryFn: async()=>{
-            const data = fetch('http://localhost:5000/requested-foods');
+            const data = fetch('https://assignment-11-server-wine-theta.vercel.app/requested-foods');
             return (await data).json();
         }
     })

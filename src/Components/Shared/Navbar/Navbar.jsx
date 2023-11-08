@@ -29,7 +29,7 @@ const Navbar = () => {
         {
             user ?
                 <div>
-                    <button onClick={handleLogOut} className="">Log out</button>
+                    <button onClick={handleLogOut} className="ml-3">Log out</button>
                 </div>
                 :
                 <div>
@@ -40,7 +40,7 @@ const Navbar = () => {
     return (
         <div>
             <div className="navbar lg:flex justify-between items-center rounded bg-base-100 my-8">
-                <div className="lg:navbar-start block">
+                <div className=" lg:navbar-start block">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -51,11 +51,11 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className=" normal-case lg:text-xl xl:text-4xl font-semibold">Feed The <span className="text-[#fa4a4a]">Hunger</span></a>
+                    <a className="ml-10 md:ml-32 lg:ml-3 normal-case lg:text-xl xl:text-4xl font-semibold">Feed The <span className="text-[#fa4a4a]">Hunger</span></a>
                 </div>
                 <div className="flex items-center lg:navbar-center">
                     <div className="mr-">
-                        <ul className="menu menu-horizontal px-1">
+                        <ul className="menu hidden lg:flex menu-horizontal px-1">
                             <li className="lg:mr-0"><NavLink to="/">Home</NavLink></li>
                             <li className="lg:mr-0"><NavLink to="/availableFoods">Available Foods</NavLink></li>
                             <li tabIndex={0}>

@@ -32,10 +32,10 @@ const Login = () => {
             <Helmet>
                 <title>Feed The Hunger || Login</title>
             </Helmet>
-            <div className="hero max-h-screen bg-base-200 mt-10 rounded-xl">
-                <div className="hero-content flex justify-between lg:gap-28">
+            <div className="hero bg-base-200 mt-10 rounded-xl">
+                <div className="hero-content flex-col lg:flex lg:justify-between lg:gap-28">
                     <div className="">
-                        <img className="rounded-md w-[600px] h-[650px]" src="https://i.ibb.co/GCTqbBM/20944201.jpg" alt="" />
+                        <img className="rounded-md w-[300px] h-[300px] lg:w-[600px] lg:h-[650px]" src="https://i.ibb.co/GCTqbBM/20944201.jpg" alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">

@@ -9,7 +9,7 @@ const MyFoodRequestCart = ({requestedFood, refetch}) => {
 
    const handleRemove = async()=>{
     try {
-        const response = await axios.delete(`http://localhost:5000/requested-foods/${_id}`)
+        const response = await axios.delete(`https://assignment-11-server-wine-theta.vercel.app/requested-foods/${_id}`)
         
         console.log(response);
         if (response.data.acknowledged === true) {

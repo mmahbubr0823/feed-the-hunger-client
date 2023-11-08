@@ -12,7 +12,7 @@ const Footer = () => {
                 <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
             </aside>
             <nav>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="mr-5">
                         <header className="footer-title">Address</header>
                         <p>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <header className="footer-title">Follow Us</header>
-                        <ul className="space-y-2">
+                        <ul className="md:space-y-2 flex items-center gap-2 md:block">
                         <li><FaFacebook className="text-2xl"></FaFacebook></li>
                         <li><FaTwitter  className="text-2xl"></FaTwitter></li>
                         <li><FaInstagram  className="text-2xl"></FaInstagram></li>

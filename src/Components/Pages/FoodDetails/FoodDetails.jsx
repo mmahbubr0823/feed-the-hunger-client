@@ -51,7 +51,7 @@ const FoodDetails = () => {
 
         // sending to backend
         try {
-            const response = await axios.post('http://localhost:5000/requested-foods', formData, {
+            const response = await axios.post('https://assignment-11-server-wine-theta.vercel.app/requested-foods', formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

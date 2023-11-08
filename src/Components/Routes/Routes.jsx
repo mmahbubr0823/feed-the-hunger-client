@@ -20,7 +20,7 @@ const myCreatedRoutes = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader:()=> fetch('http://localhost:5000/featured-foods')
+            loader:()=> fetch('https://assignment-11-server-wine-theta.vercel.app/featured-foods')
         },
         {
             path:'/login',
@@ -33,7 +33,7 @@ const myCreatedRoutes = createBrowserRouter([
         {
             path:'/availableFoods',
             element:<AvailableFoods></AvailableFoods>,
-            loader:()=> fetch('http://localhost:5000/featured-foods')
+            loader:()=> fetch('https://assignment-11-server-wine-theta.vercel.app/featured-foods')
         },
         {
             path:'/addFood',
@@ -46,14 +46,14 @@ const myCreatedRoutes = createBrowserRouter([
             element:<PrivateRoute>
               <ManageFoods></ManageFoods>
             </PrivateRoute>,
-             loader:()=> fetch(`http://localhost:5000/featured-foods`)
+             loader:()=> fetch(`https://assignment-11-server-wine-theta.vercel.app/featured-foods`)
         },
         {
             path:'/foodDetails/:id',
             element:<PrivateRoute>
               <FoodDetails></FoodDetails>
             </PrivateRoute>,
-            loader:()=> fetch(`http://localhost:5000/featured-foods`)
+            loader:()=> fetch(`https://assignment-11-server-wine-theta.vercel.app/featured-foods`)
         },
         {
             path:'/requested-foods',

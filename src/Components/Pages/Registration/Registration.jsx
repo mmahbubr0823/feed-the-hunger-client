@@ -33,7 +33,7 @@ const Registration = () => {
                 <title>Feed The Hunger || Registration</title>
             </Helmet>
             <div className="hero rounded-xl mt-10">
-                <div className="flex justify-between gap-10">
+                <div className="lg:flex justify-between gap-10">
                     <div>
                         <img src="/login.svg" alt="" />
                     </div>

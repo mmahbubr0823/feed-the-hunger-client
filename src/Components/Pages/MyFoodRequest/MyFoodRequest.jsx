@@ -19,11 +19,11 @@ const MyFoodRequest = () => {
                 <title>Feed The Hunger || MyFoodRequest</title>
             </Helmet>
             {
-                requestedFoods.length ===0 ? 
+                requestedFoods?.length ===0 ? 
                 <div className="text-center space-y-5">
-                    <div className="flex p-5 rounded-md gap-5 bg-[#f7f4e9] items-center justify-center">
-                    <img className="w-[250px] h-[250px]" src="https://i.ibb.co/4VfW3RB/7503990.jpg" alt="" />
-                    <p className="text-3xl font-semibold">You have not requested any food yet.</p>
+                    <div className="md:flex p-5 rounded-md gap-5 bg-[#f7f4e9] items-center justify-center">
+                    <img className="mx-auto w-[250px] h-[250px]" src="https://i.ibb.co/4VfW3RB/7503990.jpg" alt="" />
+                    <p className="text-3xl mt-5 font-semibold">You have not requested any food yet.</p>
                     </div>
                     <Link to={'/availableFoods'}>
                     <button className="btn btn-warning">Request a Food</button>
